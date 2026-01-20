@@ -7,6 +7,7 @@ fetch('header.html')
     .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
         initMobileMenu();
+        initHeaderScroll();
     })
     .catch(error => console.error('Error loading header:', error));
 
@@ -52,4 +53,20 @@ function initMobileMenu() {
             dropdown.classList.toggle('active');
         });
     });
+}
+
+function initHeaderScroll() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    const handleScroll = () => {
+        if (window.scrollY > window.innerHeight * 0.3) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
 }
