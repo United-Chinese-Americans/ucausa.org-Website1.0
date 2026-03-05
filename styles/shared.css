@@ -1,4 +1,9 @@
 /* General Reset */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Offsets the fixed header height so content isn't hidden */
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
