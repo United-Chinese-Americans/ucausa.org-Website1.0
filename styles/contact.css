@@ -1,0 +1,180 @@
+/* Contact Hero Section */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 300px;
+    background-image: url('https://storage.googleapis.com/objects.ucausa.org/contact/contact1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Feedback Section */
+.feedback-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000065;
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #9e2c74;
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #9e2c74;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #7a225a;
+}
+
+#form-status {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Map and Contact Info Section */
+.map-contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-wrapper {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact-info h3 {
+    font-family: "Archivo Black", sans-serif;
+    color: #000065;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #9e2c74;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .map-contact-section {
+        flex-direction: column;
+    }
+    
+    .map-wrapper, .contact-info {
+        width: 100%;
+    }
+}
