@@ -13,12 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
             statusDiv.textContent = '';
             statusDiv.style.color = '#333';
 
-            const scriptURL = 'https://script.google.com/a/macros/ucausa.org/s/AKfycbzL9Nk2En1GPV4GpsqY3NCl7ZSxjeBfoaCRtjtGQRdyAkwwbK6VtR6F6rEkeKwe52hZ/exec';
+            // Use the generic script.google.com URL to avoid forcing organization login
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzL9Nk2En1GPV4GpsqY3NCl7ZSxjeBfoaCRtjtGQRdyAkwwbK6VtR6F6rEkeKwe52hZ/exec';
             const formData = new FormData(form);
+            
+            // Convert FormData to URLSearchParams to ensure e.parameter works correctly in Google Apps Script
+            const data = new URLSearchParams();
+            for (const pair of formData) {
+                data.append(pair[0], pair[1]);
+            }
 
             fetch(scriptURL, {
                 method: 'POST',
-                body: formData,
+                body: data,
                 mode: 'no-cors'
             })
             .then(() => {
