@@ -99,7 +99,7 @@ body {
     z-index: 1001;
     top: 100%;
     left: 0;
-    border-top: 3px solid #9e2c74;
+    border-top: 3px solid #D81B60;
     text-align: left;
 }
 
@@ -120,7 +120,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: #f9f9f9;
-    color: #9e2c74;
+    color: #D81B60;
 }
 
 /* Ensure the parent link in dropdown maintains hover state if needed */
@@ -139,7 +139,7 @@ body {
 }
 
 .donate-btn {
-    background-color: #9e2c74;
+    background-color: #D81B60;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -149,7 +149,7 @@ body {
 }
 
 .donate-btn:hover {
-    background-color: 9e2c74;
+    background-color: D81B60;
 }
 
 /* Footer Styles */
@@ -199,8 +199,8 @@ body {
 }
 
 .footer-donate-btn:hover {
-    background-color: #9e2c74;
-    border-color: #9e2c74;
+    background-color: #D81B60;
+    border-color: #D81B60;
 }
 
 /* Part 2: Bottom Section */
